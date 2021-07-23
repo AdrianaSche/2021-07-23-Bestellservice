@@ -1,4 +1,8 @@
+
 target/
+.idea
+*.iml
+.DS_Store
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
