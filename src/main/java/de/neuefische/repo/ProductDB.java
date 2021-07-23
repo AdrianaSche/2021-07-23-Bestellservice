@@ -11,11 +11,14 @@ public class ProductDB {
 
     List<Product> productDB = new ArrayList<>();
 
+    Product shoes = new Product(1,"Schuhe");
+    Product jacket = new Product(2,"Jacke");
+    Product pants = new Product(3,"Hose");
 
     public ProductDB() {
-        productDB.add(new Product(1,"Schuhe"));
-        productDB.add(new Product(2,"Jacke"));
-        productDB.add(new Product(3,"Hose"));
+        productDB.add(shoes);
+        productDB.add(jacket);
+        productDB.add(pants);
     }
 
     public String list (){
