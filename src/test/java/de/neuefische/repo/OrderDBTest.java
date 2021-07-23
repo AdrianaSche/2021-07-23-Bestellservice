@@ -1,5 +1,7 @@
 package de.neuefische.repo;
 
+import de.neuefische.model.Order;
+import de.neuefische.model.Product;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +35,23 @@ class OrderDBTest {
         // THEN
         String expected = "11 1 Schuhe";
         assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("test if order is added")
+    public void tesAdd(){
+        //given
+        OrderDB orderList = new OrderDB();
+        Order order = new Order(13,new Product(4,"Hut"));
+
+
+        //when
+        orderList.add(order);
+        String actual =orderList.get(13);
+        //then
+        String expected ="13 4 Hut";
+        assertEquals(expected,actual);
+
     }
 
 }

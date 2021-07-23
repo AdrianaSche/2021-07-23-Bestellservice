@@ -34,6 +34,8 @@ public class OrderDB {
     }
 
 
+
+
     public String get(int index) {
 
         String result = "";
@@ -46,4 +48,7 @@ public class OrderDB {
     }
 
 
+    public void add(Order order) {
+        orderList.add(order);
+    }
 }
