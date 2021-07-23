@@ -20,11 +20,30 @@ public class OrderDB {
     }
 
     public String list() {
-        return " ";
+        String result = "";
+        boolean firstEntry = true;
+        for (Order ord : orderList) {
+            if(firstEntry) {
+                firstEntry = false;
+                result += "OID: " + ord.getOrderId() + " PID:" + ord.getProduct().getProductId() + " P:" +ord.getProduct().getName();
+            } else {
+                result += ", OID: " + ord.getOrderId() + " PID:" + ord.getProduct().getProductId() + " P:" +ord.getProduct().getName();
+            }
+        }
+        return result;
     }
 
 
-    public String get(int i) {
-        return " ";
+    public String get(int index) {
+
+        String result = "";
+        for (Order ord: orderList) {
+            if (ord.getOrderId() == index) {
+                result += ord.getOrderId() + " " + ord.getProduct().getProductId() + " " + ord.getProduct().getName();
+            }
+        }
+        return result;
     }
+
+
 }

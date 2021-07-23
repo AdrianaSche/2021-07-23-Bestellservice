@@ -17,21 +17,21 @@ class OrderDBTest {
         //when
         String actual = orderDB.list();
         //then
-        String expected = "OID: 10 PID:1 P:Schuhe, OID:11 PID:1 P:Schuhe, OID:12 PID:3 P:Hose";
+        String expected = "OID: 10 PID:1 P:Schuhe, OID: 11 PID:1 P:Schuhe, OID: 12 PID:3 P:Hose";
         assertEquals(expected,actual);
     }
 
     @Test
-    @DisplayName("test get whole order ID, PID, productname")
+    @DisplayName("test get whole order ID, PID, product name")
     public void testGetProduct() {
         // GIVE
         OrderDB orderList = new OrderDB();
 
         // WHEN
-        String actual = orderList.get(2);
+        String actual = orderList.get(11);
 
         // THEN
-        String expected = "OID:11 PID:1 P:Schuhe";
+        String expected = "11 1 Schuhe";
         assertEquals(expected, actual);
     }
 
