@@ -22,5 +22,19 @@ class ProductDBTest {
         assertEquals(expected,actual);
     }
 
+    @Test
+    @DisplayName("test get whole product with ID and name")
+    public void testGetProduct() {
+        // GIVE
+        ProductDB productList = new ProductDB();
+
+        // WHEN
+        String actual = productList.get(2);
+
+        // THEN
+        String expected = "2, Jacke";
+        assertEquals(expected, actual);
+    }
+
 
 }

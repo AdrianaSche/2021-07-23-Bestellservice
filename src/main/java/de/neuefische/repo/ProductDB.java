@@ -31,8 +31,20 @@ public class ProductDB {
             }
 
         }return result;
-
     }
+
+    public String get(int index) {
+
+        String result = "";
+        for (Product prod: productDB) {
+            if (prod.getProductId() == index) {
+                result += prod.getProductId() + ", " + prod.getName();
+            }
+        }
+        return result;
+    }
+
+
 
 }
 
