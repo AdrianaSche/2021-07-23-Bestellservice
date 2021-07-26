@@ -21,7 +21,7 @@ public class ProductDB {
         productDB.add(pants);
     }
 
-    public String list (){
+    public String listToString (){
         String result="";
         boolean isFirst = true;
 

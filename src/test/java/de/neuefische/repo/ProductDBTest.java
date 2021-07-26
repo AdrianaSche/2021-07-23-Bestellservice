@@ -10,12 +10,12 @@ class ProductDBTest {
     @Test
     @DisplayName("output of productlist")
 
-    public void testList(){
+    public void testListToList(){
         //Given
         ProductDB productDB = new ProductDB();
 
         //when
-        String actual = productDB.list();
+        String actual = productDB.listToString();
         //then
         String expected = "Schuhe, Jacke, Hose";
 

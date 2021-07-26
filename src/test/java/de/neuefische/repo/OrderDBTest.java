@@ -5,6 +5,8 @@ import de.neuefische.model.Product;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class OrderDBTest {
@@ -12,14 +14,26 @@ class OrderDBTest {
     @Test
     @DisplayName("output of orderlist")
 
+    public void testListToString(){
+        //Given
+        OrderDB orderDB = new OrderDB();
+
+        //when
+        String actual = orderDB.listToString();
+        //then
+        String expected = "OID: 10 PID:1 P:Schuhe, OID: 11 PID:1 P:Schuhe, OID: 12 PID:3 P:Hose";
+        assertEquals(expected,actual);
+    }
+
+    @Test
     public void testList(){
         //Given
         OrderDB orderDB = new OrderDB();
 
         //when
-        String actual = orderDB.list();
+        List<Order> actual = orderDB.list();
         //then
-        String expected = "OID: 10 PID:1 P:Schuhe, OID: 11 PID:1 P:Schuhe, OID: 12 PID:3 P:Hose";
+        String expected = ;
         assertEquals(expected,actual);
     }
 
